@@ -44,12 +44,15 @@
             justify-content: center;
             background-color: #0a9396;
             padding: 1rem;
+            flex-wrap: wrap;
         }
         nav a {
             color: #fff;
             text-decoration: none;
-            margin: 0 2rem;
+            margin: 0.5rem;
             font-weight: 600;
+            text-align: center;
+            flex: 1 0 auto;
         }
         .contact-container {
             display: flex;
@@ -115,6 +118,12 @@
             .contact-details {
                 text-align: center;
             }
+            nav a {
+                flex: 1 0 50%;
+            }
+            .contact-container {
+                padding: 1rem;
+            }
         }
     </style>
 </head>
@@ -167,3 +176,4 @@
     </script>
 </body>
 </html>
+
