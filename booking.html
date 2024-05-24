@@ -44,12 +44,15 @@
             justify-content: center;
             background-color: #0a9396;
             padding: 1rem;
+            flex-wrap: wrap;
         }
         nav a {
             color: #fff;
             text-decoration: none;
-            margin: 0 2rem;
+            margin: 0.5rem;
             font-weight: 600;
+            text-align: center;
+            flex: 1 0 auto;
         }
         .calendar-container {
             max-width: 800px;
@@ -80,6 +83,14 @@
         }
         .booking-form button:hover {
             background-color: #003d5b;
+        }
+        @media (max-width: 768px) {
+            .calendar-container {
+                padding: 1rem;
+            }
+            nav a {
+                flex: 1 0 50%;
+            }
         }
     </style>
 </head>
