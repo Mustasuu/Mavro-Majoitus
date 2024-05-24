@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hinnasto – Mavro Majoitus Oy</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('beach.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        header {
+            background-color: #005f73;
+            color: #fff;
+            text-align: center;
+            padding: 4rem 1rem 2rem;
+            background: url('header-bg.jpg') no-repeat center center;
+            background-size: cover;
+            position: relative;
+        }
+        header::before {
+            content: 'Mavro Majoitus Oy';
+            display: block;
+            color: #ffd700;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.5rem;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ffd700;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #0a9396;
+            padding: 1rem;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 2rem;
+            font-weight: 600;
+        }
+        .content {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .content h2 {
+            color: #003d5b;
+        }
+        .booking-btn {
+            display: block;
+            width: max-content;
+            margin: 2rem auto;
+            padding: 1rem 2rem;
+            background-color: #94d2bd;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .booking-btn:hover {
+            background-color: #5f9ea0;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 4rem 0;
+        }
+        .gallery img {
+            width: calc(33% - 10px);
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 768px) {
+            .gallery img {
+                width: calc(50% - 10px);
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery img {
+                width: 100%;
+            }
+        }
+        table {
+            width: 100%;
+            margin-top: 2rem;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #005f73;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hinnasto – Mavro Majoitus Oy</h1>
+    </header>
+    <nav>
+        <a href="index.html">Etusivu</a>
+        <a href="accommodation.html">Majoitus</a>
+        <a href="experiences.html">Kokemukset</a>
+        <a href="pricing.html">Hinnasto</a>
+        <a href="contact.html">Yhteystiedot</a>
+    </nav>
+    <div class="content">
+        <h2>Majoitusvaihtoehtojemme Hinnat</h2>
+        <table>
+            <tr>
+                <th>Majoitusvaihtoehto</th>
+                <th>Hinta per yö</th>
+            </tr>
+            <tr>
+                <td>Ylellinen huvila</td>
+                <td>150€</td>
+            </tr>
+            <tr>
+                <td>Merinäköalallinen huoneisto</td>
+                <td>120€</td>
+            </tr>
+            <tr>
+                <td>Perinteinen kivitalo</td>
+                <td>100€</td>
+            </tr>
+        </table>
+        <p>Hinnat ovat keskiarvoja ja voivat vaihdella sesongin ja saatavuuden mukaan.</p>
+        <a href="booking.html" class="booking-btn">Varaa Nyt</a>
+    </div>
+    <div class="gallery">
+        <img src="kalymnos villa.jpg" alt="Ylellinen huvila">
+        <img src="sea.jpg" alt="Merinäköalallinen huoneisto">
+        <img src="stone.jpg" alt="Perinteinen kivitalo">
+    </div>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
